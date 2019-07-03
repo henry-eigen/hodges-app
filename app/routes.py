@@ -23,7 +23,7 @@ def activate_job():
                 f = load_floor(i)
                 f.update()
                 f.save_img()
-            time.sleep(10)
+            time.sleep(5)
             print("update complete")
             
 
