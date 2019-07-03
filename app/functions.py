@@ -3,7 +3,6 @@ from app import app
 import numpy as np
 from PIL import Image
 import pickle
-import cv2
 import os
 
 class Region():

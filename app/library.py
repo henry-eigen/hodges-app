@@ -3,7 +3,6 @@ from app import app
 import numpy as np
 import pickle
 from PIL import Image
-import cv2
 
 class Region():
     def __init__(self, coords, seats, camera_ip=None):
