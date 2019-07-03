@@ -1,1 +1,1 @@
-gunicorn hodges:app
+web: flask run; gunicorn hodges:app
