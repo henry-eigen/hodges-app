@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script>
+
+<style>
+    .btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 5px solid white; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+    
+
+img {
+    display: block;
+}
+    
+</style>
+    
+    
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js" charset="utf-8"></script>
+    <script src="http://luis-almeida.github.io/unveil/jquery.unveil.min.js" charset="utf-8"></script>
+    <script>
+$(document).ready(function() {
+    $('img').unveil(1000);
+});
+    </script>
+
+
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+    
+<body>
+
+    
+    <div class="container">
+
+        <div class="panel panel-default">
+        <div class="panel-heading">Group Study</div>
+        <div class="panel-body">
+            
+        <div class="row">
+            
+            
+        <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">Floor 3</div>
+            <div class="panel-body">
+                <div class="col-md-12">      
+                    <img src="{{ user_image_3 }}" class="img-responsive" />      
+                </div>
+            </div>
+      
+        </div><hr>
+        </div>
+
+        
+            
+        <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">Floor 6</div>
+            <div class="panel-body">
+                <div class="col-md-12">      
+                    <img src="{{ user_image_6 }}" class="img-responsive img-center"/>      
+                </div>
+            </div>
+        </div><hr>
+        </div>
+            
+            
+        </div>
+        </div>
+        </div>
+        
+        <div class="panel panel-default">
+        <div class="panel-heading">Quiet Floors</div>
+        <div class="panel-body">
+            
+        <div class="row">
+            
+            
+        <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">Floor 4</div>
+            <div class="panel-body">
+                <div class="col-md-12">      
+                    <img src="{{ user_image_4 }}"class="img-responsive" />      
+                </div>
+            </div>
+        </div><hr>
+        </div>
+            
+            
+        <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">Floor 5</div>
+            <div class="panel-body">
+                <div class="col-md-12">      
+                    <img src="{{ user_image_5 }}"class="img-responsive" />      
+                </div>
+            </div>
+        </div><hr>
+        </div>
+
+        </div>
+        </div>
+        </div>
+    </div>
+    
+    
+    <div class="btn-group">
+        <button type="button" onclick="window.location.href='{{ url_for('index') }}';">Refresh Data</button>
+        <button type="button" onclick="window.location.href='{{ url_for('video') }}';">Behind the Scenes</button>
+    </div>
+    
+    
+
+
+        
+</body>
+    
+
+</html>
+
