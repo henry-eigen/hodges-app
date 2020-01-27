@@ -48,15 +48,18 @@ def index():
                            user_image_5=img_src_5,
                            user_image_6=img_src_6)
 
+
+
 @app.route('/video')
-def video():
-    
+def video():    
     
     return render_template('video.html', title='Video')
 
 # -----------------------------------------------------------------
 
-
+@app.route('/api/v1.0/get_colors', methods=['GET'])
+def get_colors():
+    return None
 
 
 
