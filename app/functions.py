@@ -30,16 +30,20 @@ class Floor():
     def seat_list(self):
         return [r.seats for r in self.regions]
     
-    def update(self):
+    def update(self, random=True):
         for region in self.regions:
-            #cam = cv2.VideoCapture(region.camera_ip)
-            #ret_val, img = cam.read()
-            #RGB_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-            #image = Image.fromarray(RGB_img)
-            #population = self.model.detect_image(image)
-            population = np.random.randint(0, region.seats)
+            if random:
+                population = np.random.randint(0, region.seats)
+                
+            else:
+                cam = cv2.VideoCapture(region.camera_ip)
+                ret_val, img = cam.read()
+                RGB_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+                image = Image.fromarray(RGB_img)
+                population = self.model.detect_image(image)
+
             region.set_pop(population)
-            
+                
     def save_img(self):
         result = Image.fromarray(np.uint8(self.render_img() * 255))
         result.save(self.path)
